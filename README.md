@@ -1,18 +1,18 @@
 ### Recuperar todas las películas
 
-GET http://localhost:1234/movies
+GET https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies
 
 ### Recuperar todas las películas por id
 
-GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 
 ### Recuperar todas las películas por un género
 
-GET http://localhost:1234/movies?genre=action
+GET https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies?genre=action
 
 ### Crear una pelicula con POST
 
-POST http://localhost:1234/movies
+POST https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies
 Content-Type: application/json
 
 {
@@ -25,7 +25,7 @@ Content-Type: application/json
 }
 
 ### Actualizar una película, el id no se puede cambiar ya que en zod no lo estamos validando, igual la API no rompe funciona con las propiedades
-PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+PATCH https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 Content-Type: application/json
 
 {
