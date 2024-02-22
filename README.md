@@ -1,0 +1,33 @@
+### Recuperar todas las películas
+
+GET https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies
+
+### Recuperar todas las películas por id
+
+GET https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar todas las películas por un género
+
+GET https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies?genre=action
+
+### Crear una pelicula con POST
+
+POST https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies
+Content-Type: application/json
+
+{
+    "title": "The Dark Knight",
+    "year": 2008,
+    "director": "Christopher Nolan",
+    "duration": 152,
+    "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+    "genre": ["Action", "Drama"]
+}
+
+### Actualizar una película, el id no se puede cambiar ya que en zod no lo estamos validando, igual la API no rompe funciona con las propiedades
+PATCH https://rest-api-deploy-dev-nqms.3.us-1.fl0.io/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "director": "Christopher Nolan"
+}
